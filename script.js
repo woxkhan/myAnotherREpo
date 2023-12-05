@@ -19,3 +19,20 @@ class Myclass{
 }
 const myObjext =new Myclass()
 console.log(myObjext.myProperty)
+
+
+class Person {
+    constructor(name ){
+        this.name = name
+    }
+        
+    set NewName(newName) {
+     this.name = newName
+}
+
+    }
+
+    const well = new Person("Awais")
+    console.log(well.name)
+    console.log(well.NewName = "Messi")
+    console.log(well)
