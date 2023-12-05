@@ -6,8 +6,46 @@
     <title>Document</title>
 </head>
 <body>
-  <p>Hello</p>
-  <button class="btn">Change</button>
-    <script src="script.js"></script>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Policy Example</title>
+  </head>
+  <body>
+  
+    <label>
+      <input type="checkbox" id="policyCheckbox"> I agree to the policy
+    </label>
+  
+    <select id="optionsSelect">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+      <option value="option3">Option 3</option>
+    </select>
+  
+    <button onclick="checkPolicyAndProceed()">Proceed</button>
+  
+    <script>
+      function checkPolicyAndProceed() {
+        var policyCheckbox = document.getElementById('policyCheckbox');
+        var optionsSelect = document.getElementById('optionsSelect');
+  
+        // Check if the policy checkbox is checked
+        if (policyCheckbox.checked) {
+          // Policy is checked, proceed with the selected option
+          var selectedOption = optionsSelect.options[optionsSelect.selectedIndex].value;
+          alert('Selected option: ' + selectedOption);
+        } else {
+          // Policy is not checked, show an error
+          alert('Please check the policy before proceeding.');
+        }
+      }
+    </script>
+  <script src="script.js"></script>
+  </body>
+  </html>
+  
 </body>
 </html>
